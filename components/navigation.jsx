@@ -3,9 +3,10 @@ import Link from 'next/link';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { getDomain } from '../lib/data';
 
 const navigation = () => {
-  let domain = 'devfund.net';
+  const domain = getDomain();
   return (
     <Navbar bg="primary" variant="dark" expand="lg">
       <Container>
@@ -25,7 +26,7 @@ const navigation = () => {
             About
             </Link>
             
-            <Nav.Link href="https://domaindirectory.com/servicepage/?domain=devfund.net" target='_blank'>Contact</Nav.Link>
+            <Nav.Link href={"https://domaindirectory.com/servicepage/?domain="+domain} target='_blank'>Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

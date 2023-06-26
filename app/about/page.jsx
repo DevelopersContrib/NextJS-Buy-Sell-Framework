@@ -1,14 +1,17 @@
 import Script from 'next/script';
-console.log('about')
-const page = () => {
+import { getDomain } from '../../lib/data';
+
+const About = () => {
+  const domain = getDomain();
+  
   return (
     <>
 
-    <Script src="https://tools.contrib.com/pages/aboutnew?d=handyman.com&container=aboutnew-script"/>
+    <Script src={"https://tools.contrib.com/pages/aboutnew?d="+domain+"&container=aboutnew-script"}/>
        <div className="aboutnew-script"></div>
     </>
    
   )
 }
 
-export default page
+export default About

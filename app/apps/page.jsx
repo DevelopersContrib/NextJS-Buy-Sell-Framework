@@ -1,13 +1,15 @@
 import Script from 'next/script';
+import { getDomain } from '../../lib/data';
 
-const page = () => {
+const Apps = () => {
+  const domain = getDomain();
   return (
     <>
-        <Script src="https://tools.contrib.com/pages/apps?d=handyman.com&container=apps-script"/>
+        <Script src={"https://tools.contrib.com/pages/apps?d="+domain+"&container=apps-script"}/>
         <div className="apps-script"></div>
     </>
    
   )
 }
 
-export default page
+export default Apps

@@ -1,21 +1,25 @@
 import Link from "next/link"
-
 import Navigation from '../components/navigation';
 import Footer from '../components/footer';
-export default function Home() {
-  console.log('home')
+import Logo from '../components/logo';
+import { getData, getDomain } from '../lib/data';
+
+export default async function Home() {
+  const c = await getData();
+  const domain = await getDomain();
+  const background = c.data.background_url!==null?c.data.background_url:'https://cdn.vnoc.com/background/tech4.jpg';
   return (
     <>
       <Navigation />
       <section 
-        style={{ backgroundImage: `url('https://cdn.vnoc.com/background/tech4.jpg')` }}
+        style={{ backgroundImage: `url('${background}')` }}
         className="tw-min-h-[calc(100vh-56px-74px)] tw-bg-cover tw-bg-no-repeat tw-relative tw-text-white tw-bg-[50%] tw-py-12 tw-flex tw-w-full tw-items-center"
       >
         <div className="tw-bg-[rgba(3,38,51,0.85)] tw-top-0 tw-left-0 tw-right-0 tw-bottom-0 tw-absolute"></div>
         <div className="container tw-relative">
           <div className="row tw-mb-8">
             <div className="col-xl-12 tw-text-center">
-              <h1 className="tw-text-5xl font-800">Devfund.net</h1>
+              <Logo />
               <p className="tw-text-2xl">
                 <a href="https://contrib.com/" className="tw-no-underline text-primary">
                 Proud Member of CONTRIB
@@ -34,7 +38,7 @@ export default function Home() {
                   Buy
                 </h3>
                 <h4 className="tw-flex tw-mb-5 tw-flex-col tw-text-lg tw-font-medium tw-text-gray-500">
-                  Devfund.net
+                  {domain}
                 </h4>
                 <div className="mb-3 d-grid">
                   <Link href="/buy" className="btn btn-primary btn-lg"> Make An Offer </Link>
@@ -48,7 +52,7 @@ export default function Home() {
                   PARTNER
                 </h3>
                 <h4 className="tw-flex tw-mb-5 tw-flex-col tw-text-lg tw-font-medium tw-text-gray-500">
-                  Devfund.net
+                  {domain}
                 </h4>
                 <div className="mb-3 d-grid">
                   <Link href="/partner" className="btn btn-primary btn-lg"> Submit Partnership </Link>
@@ -62,12 +66,12 @@ export default function Home() {
                   JOIN
                 </h3>
                 <h4 className="tw-flex tw-mb-5 tw-flex-col tw-text-lg tw-font-medium tw-text-gray-500">
-                  Devfund.net Community
+                  {domain} Community
                 </h4>
                 <div className="mb-3 d-grid">
-                  <a target="_blank" href="https://www.contrib.com/signup/firststep?domain=devfund.net" className="btn btn-primary btn-lg"> Join Now </a>
+                  <a target="_blank" href={"https://www.contrib.com/signup/firststep?domain="+domain} className="btn btn-primary btn-lg"> Join Now </a>
                 </div>
-                <p>Join our community of 150,000 <br /> Devfund.net members over at Contrib.</p>
+                <p>Join our community of 150,000 <br /> {domain} members over at Contrib.</p>
               </div>
             </div>
           </div>

@@ -1,8 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
-export const metadata = {
-  title: 'Welcome to devfund.net',
-  description: 'devfund.net - Join our exclusive community of like minded people on devfund.net',
+import { getData } from '../lib/data';
+
+export async function generateMetadata({ params, searchParams }, parent) {
+	const c = await getData();
+	
+	return {
+		title: c.data.title,
+		description: c.data.description,
+	}
 }
 
 export default function RootLayout({ children }) {
