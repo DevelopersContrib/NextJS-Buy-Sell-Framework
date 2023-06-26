@@ -148,7 +148,7 @@ const page = () => {
                 <FontAwesomeIcon icon={faArrowAltCircleRight} className='tw-w-4 tw-h-4 tw-inline-flex me-2' />
                 Please check your spam box for safe measure.
               </p>
-              <p class="text-center mb-4">
+              <p className="text-center mb-4">
                 Contrib is our contribution platform and it allows us to get people to help contribute, <br /> make offer or partner with premium world class brands. You could check your Offer submission in your <br /> <b>&quot;My Offers Contrib App&quot;</b>.
               </p>
               <p className='h4'>
@@ -217,7 +217,7 @@ const page = () => {
                 <div className="row tw-items-center">
                   <div className="col-xl-8 text-xl-end">
                     <h4>Select Your Domain</h4>
-                    <p class="small">Search Ecorp&apos;s database for the ultimate domain name for your business, project or brand.</p>
+                    <p className="small">Search Ecorp&apos;s database for the ultimate domain name for your business, project or brand.</p>
                   </div>
                   <div className="col-xl-4">
                     <Image
@@ -243,7 +243,7 @@ const page = () => {
                   </div>
                   <div className="col-xl-8">
                     <h4>Submit your best offer</h4>
-                    <p class="small">We&apos;ll let you know if it&apos;s too low for consideration.</p>
+                    <p className="small">We&apos;ll let you know if it&apos;s too low for consideration.</p>
                   </div>
                 </div>
               </div>
@@ -251,7 +251,7 @@ const page = () => {
                 <div className="row tw-items-center">
                   <div className="col-xl-8 text-xl-end">
                     <h4>Agree to the terms</h4>
-                    <p class="small">Once the price is decided, agree to the terms of the domain name sales agreement.</p>
+                    <p className="small">Once the price is decided, agree to the terms of the domain name sales agreement.</p>
                   </div>
                   <div className="col-xl-4">
                     <Image
@@ -277,7 +277,7 @@ const page = () => {
                   </div>
                   <div className="col-xl-8">
                     <h4>Launch your website</h4>
-                    <p class="small">Once payment has been confirmed the owner will transfer the domain to you.</p>
+                    <p className="small">Once payment has been confirmed the owner will transfer the domain to you.</p>
                   </div>
                 </div>
               </div>

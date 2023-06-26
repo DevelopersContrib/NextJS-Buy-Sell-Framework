@@ -1,8 +1,12 @@
 import Link from "next/link"
+
+import Navigation from '../components/navigation';
+import Footer from '../components/footer';
 export default function Home() {
   console.log('home')
   return (
     <>
+      <Navigation />
       <section 
         style={{ backgroundImage: `url('https://cdn.vnoc.com/background/tech4.jpg')` }}
         className="tw-min-h-[calc(100vh-56px-74px)] tw-bg-cover tw-bg-no-repeat tw-relative tw-text-white tw-bg-[50%] tw-py-12 tw-flex tw-w-full tw-items-center"
@@ -69,6 +73,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   )
 }
