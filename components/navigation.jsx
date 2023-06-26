@@ -21,7 +21,10 @@ const navigation = () => {
             <Link href="/partner" className='nav-link'>
             Partner
             </Link>
-            <Nav.Link href="#">About</Nav.Link>
+            <Link href="/about" className='nav-link'>
+            About
+            </Link>
+            
             <Nav.Link href="https://domaindirectory.com/servicepage/?domain=devfund.net" target='_blank'>Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
