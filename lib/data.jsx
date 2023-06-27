@@ -1,3 +1,4 @@
+let API1 = process.env.API1;
 let DOMAIN = process.env.NEXT_PUBLIC_VERCEL_URL;
 
 export function getDomain() {
@@ -5,7 +6,7 @@ export function getDomain() {
 }
 
 export async function getData() {
-  const url = `https://api1.contrib.co/v2/domains/getdomainconfig?key=5c1bde69a9e783c7edc2e603d8b25023&domain=${DOMAIN}`
+  const url = `${API1+DOMAIN}`
   const res = await fetch(url)
   
   if (!res.ok) {
