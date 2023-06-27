@@ -1,20 +1,16 @@
-let API1 = process.env.API1;
-let DOMAIN = process.env.NEXT_PUBLIC_VERCEL_URL;
-
 export function getDomain() {
-  return DOMAIN
+  return process.env.NEXT_PUBLIC_VERCEL_URL;
 }
 
 export async function getData() {
-  const url = `${API1+DOMAIN}`
+  const domain = process.env.NEXT_PUBLIC_VERCEL_URL
+  const url = (domain.indexOf('localhost')>-1?'http://':'https://')+domain+'/api/domain'
+ 
   const res = await fetch(url)
   
   if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch data')
   }
   
   return res.json()
 }
-
-

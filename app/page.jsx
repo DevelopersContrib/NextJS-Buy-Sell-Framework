@@ -4,9 +4,10 @@ import Footer from '../components/footer';
 import Logo from '../components/logo';
 import { getData, getDomain } from '../lib/data';
 
+
 export default async function Home() {
   const c = await getData();
-  const domain = await getDomain();
+  const domain = getDomain();
   const background = c.data.background_url!==null?c.data.background_url:'https://cdn.vnoc.com/background/tech4.jpg';
   return (
     <>

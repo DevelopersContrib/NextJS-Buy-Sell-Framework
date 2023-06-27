@@ -9,6 +9,7 @@ import { getDomain } from '../../lib/data';
 
 const Partner = () => {
   const domain = getDomain();
+
   return (
     <section 
       className="tw-min-h-[calc(100vh-56px-74px)] tw-relative tw-py-12 tw-flex tw-w-full tw-items-center tw-bg-white"
