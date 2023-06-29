@@ -1,8 +1,15 @@
 import Image from 'next/image'
-import { getData } from '../lib/data';
+//import { getData } from '../lib/data';
 
-export default async function Logo() {
-  const c = await getData();
+export default function Logo() {
+  const c = {
+    data:{
+      domainName:'Davao.com',
+      logo:'',
+    }
+  }
+  //const c = await getData();
+
   if(c.data.logo){
     return (
         <Image 

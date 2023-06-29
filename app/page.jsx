@@ -1,14 +1,15 @@
 import Link from "next/link"
-import Navigation from '../components/navigation';
-import Footer from '../components/footer';
-import Logo from '../components/logo';
-import { getData, getDomain } from '../lib/data';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import Logo from '../components/Logo';
+import { /*getData, */getDomain } from '../lib/data';
 
 
 export default async function Home() {
-  const c = await getData();
+  //const c = await getData();
   const domain = getDomain();
-  const background = c.data.background_url!==null?c.data.background_url:'https://cdn.vnoc.com/background/tech4.jpg';
+  //const background = c.data.background_url!==null?c.data.background_url:'https://cdn.vnoc.com/background/tech4.jpg';
+  const background = 'https://cdn.vnoc.com/background/tech4.jpg';
   return (
     <>
       <Navigation />

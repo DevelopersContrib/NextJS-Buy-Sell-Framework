@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
-import { getData, getDomain } from '../lib/data';
+import { /*getData,*/ getDomain } from '../lib/data';
 import Script from 'next/script';
-
+/*
 const c = await getData();
 export async function generateMetadata({ params, searchParams }, parent) {
 	return {
@@ -11,14 +11,14 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: c.data.keywords,
     author: c.data.author
 	}
-}
+}*/
 
 export default function RootLayout({ children }) {
   const domain = getDomain();
   return (
     <html lang="en">
       <head>
-       
+        {/*
         { c.data.adsenseClientId!==''?(<Script id="g-ads" async='' src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${c.data.adsenseClientId}`} crossorigin="anonymous"  data-checked-head="true"></Script>):'' }
         <Script id="g-manager" async src={`https://www.googletagmanager.com/gtag/js?id=${c.data.accountGA}`}></Script>
         <Script id="g-tag">
@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
             })();
           `}
         </Script>
-       {/*
+      
         <noscript>{`<p><img src="${"//stats.numberchallenge.com/matomo.php?idsite="+c.data.piwikId}" alt="" /></p>`}</noscript>
          */}
         <Script id="test-script" src="https://tools.contrib.com/js/test.js"></Script>
