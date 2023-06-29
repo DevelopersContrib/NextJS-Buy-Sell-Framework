@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faSearch, faFile, faDesktop, faArrowAltCircleRight, faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import { getDomain } from '../../lib/data';
+import Logo from '../../components/Logo';
 
 const Buy = () => {
   const domain = getDomain();
@@ -13,16 +14,7 @@ const Buy = () => {
       <div className="container">
         <div className="row">
           <div className="col-xl-12 tw-text-center">
-            <h1 className="tw-text-5xl font-800">{domain}</h1>
-            <p className="tw-text-2xl">
-              <a href="https://contrib.com/" className="tw-no-underline text-primary">
-              Proud Member of CONTRIB
-              </a>
-              {" "}|{" "}
-              <a href="https://vnoc.com/" className="tw-no-underline text-primary">
-              Powered by VNOC
-              </a>
-            </p>
+            <Logo domain={domain} />
           </div>
           {/* Start:: Buy Forms */}
           <div className="col-xl-12 ">

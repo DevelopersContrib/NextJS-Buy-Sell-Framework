@@ -2,17 +2,17 @@ import Link from "next/link"
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Logo from '../components/Logo';
-import { /*getData, */getDomain } from '../lib/data';
+import { getData, getDomain } from '../lib/data';
 
 
 export default async function Home() {
-  //const c = await getData();
+  const c = await getData();
   const domain = getDomain();
-  //const background = c.data.background_url!==null?c.data.background_url:'https://cdn.vnoc.com/background/tech4.jpg';
-  const background = 'https://cdn.vnoc.com/background/tech4.jpg';
+  const background = c.data.background_url!==null?c.data.background_url:'https://cdn.vnoc.com/background/tech4.jpg';
+
   return (
     <>
-      <Navigation />
+      <Navigation domain={domain} />
       <section 
         style={{ backgroundImage: `url('${background}')` }}
         className="tw-min-h-[calc(100vh-56px-74px)] tw-bg-cover tw-bg-no-repeat tw-relative tw-text-white tw-bg-[50%] tw-py-12 tw-flex tw-w-full tw-items-center"
@@ -21,16 +21,7 @@ export default async function Home() {
         <div className="container tw-relative">
           <div className="row tw-mb-8">
             <div className="col-xl-12 tw-text-center">
-              <Logo />
-              <p className="tw-text-2xl">
-                <a href="https://contrib.com/" className="tw-no-underline text-primary">
-                Proud Member of CONTRIB
-                </a>
-                {" "}|{" "}
-                <a href="https://vnoc.com/" className="tw-no-underline text-primary">
-                Powered by VNOC
-                </a>
-              </p>
+              <Logo domain={domain} logo={c.data.logo} />
             </div>
           </div>
           <div className="row gy-3 gx-md-3">
@@ -79,7 +70,7 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer domain={domain} />
     </>
   )
 }

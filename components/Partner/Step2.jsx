@@ -1,6 +1,6 @@
 import ErrorBlock from '../ErrorBlock';
 
-export default function Step2({data, err, handleSubmit, handleChange, handleChangeCountry, prevStep}) {
+export default function Step2({data, err, handleSubmit, handleChange, handleChangeCountry, prevStep, countries}) {
     return (
         <>
           {/* Start:: Step 2 */}
@@ -28,6 +28,7 @@ export default function Step2({data, err, handleSubmit, handleChange, handleChan
                   <label htmlFor="" className='form-label'>Country <span className="text-danger">*</span>
                   </label>
                   <select name="country"  onChange={handleChangeCountry} value={data.country} className="form-select form-select-lg">
+                  {countries.map(country=><option key={country.country_id} value={country.country_id}>{country.name}</option>)}
                     <option></option>
                     <option value="147">Philippines</option>
                     <option value="37">Canada</option>
