@@ -9,7 +9,7 @@ export default function BuyLayout({ children }) {
     <>
       <Navigation domain={domain} />
       {children}
-      <Footer />
+      <Footer domain={domain} />
     </>
   )
 }

@@ -9,7 +9,7 @@ export default function PartnerLayout({ children }) {
     <>
       <Navigation domain={domain} />
       {children}
-      <Footer />
+      <Footer domain={domain} />
     </>
   )
 }

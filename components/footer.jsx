@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse,faBookmark,faBook,faCube } from '@fortawesome/free-solid-svg-icons'
 
 const Footer = ({domain}) => {
+  
   return (
     <footer className="tw-text-white tw-bg-black tw-py-6">
       <div className="container">
