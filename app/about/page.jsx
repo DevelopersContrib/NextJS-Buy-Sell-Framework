@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import { getDomain } from '../../lib/data';
 
 const About = () => {
@@ -5,8 +6,8 @@ const About = () => {
   
   return (
     <>
-      <h1>About</h1>
-       <div className="aboutnew-script"></div>
+      <Script src={"https://tools.contrib.com/pages/aboutnew?d="+domain+"&container=aboutnew-script"}/>
+      <div className="aboutnew-script"></div>
     </>
    
   )

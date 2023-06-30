@@ -188,8 +188,11 @@ export default function PartnerForm ({countries, setSuccess, setEmailCode}) {
 
   return (
     <div className="tw-flex-[0_0_50%] tw-p-12">
-      {showStep()}
-      {data.isLoading ? <LoadingState />: null}
+      {
+        data.isLoading ? (
+          <LoadingState />
+        ): showStep()
+      }
     </div>
   )
 };
