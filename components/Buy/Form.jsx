@@ -65,7 +65,7 @@ function BuyForm({domain, countries, setSuccess}) {
 		setData({ ...data, [e.target.name]: e.target.value });
 	};
 
-  const countryChange = (e) => {
+    const countryChange = (e) => {
 		const val = e.target.value.split('::')
 		setData(prevData => {
 			return {...prevData, ...{
@@ -126,7 +126,7 @@ function BuyForm({domain, countries, setSuccess}) {
 				<div className="tw-flex tw-flex-col lg:tw-flex-row tw-w-full mb-3">
 					<div className="tw-flex-[0_0_50%] tw-p-12">
 						{/* Start:: Step 1 */}
-						<div className="row ">
+						<div className="row">
 							<div className="col-xl-12 tw-text-center mb-3">
 								<h2>Partner with {domain} today</h2>
 								<p>
