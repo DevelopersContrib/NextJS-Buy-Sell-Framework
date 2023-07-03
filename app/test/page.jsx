@@ -1,17 +1,16 @@
-import { getScript } from '../../lib/data';
-import ScriptLoader from '../../components/ScriptLoader';
-
+import Script from 'next/script';
+import { getDomain } from '../../lib/data';
 
 const page = async () => {
-  const data1 = 'lorem <b>ipsum</b> <script>console.log("hello...");</script>';	
-	const data = await getScript('https://tools.contrib.com/js/testhtmlscript.js');
-
-  return (
+	const domain = getDomain();
+	return (
 		<>
-			<div>test page</div>
-			<ScriptLoader html={data} />
+			<div >test page</div>
+			<Script src={"https://tools.contrib.com/widget/fheader?d="+domain+"&container=fheader-script"}/>
+      <div className="fheader-script"></div>
 		</>
   )
 }
 
 export default page
+
