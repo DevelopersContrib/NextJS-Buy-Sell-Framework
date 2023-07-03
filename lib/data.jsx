@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export function getDomain() {
   return process.env.NEXT_PUBLIC_VERCEL_URL==='localhost:3000'?'javapoint.com':process.env.NEXT_PUBLIC_VERCEL_URL;
 }
@@ -12,4 +14,14 @@ export async function getData() {
   }
   
   return res.json()
+}
+
+export async function getScript(url) {
+  try{
+    const res = await axios.get(url);
+    return res.data;
+  }catch(e){
+    console.log('error getScript',e)
+    return {error:'error getScript'}
+  }
 }

@@ -50,9 +50,9 @@ export default function RootLayout({ children }) {
         </Script>
       {/*
         <noscript>{`<p><img src="${"//stats.numberchallenge.com/matomo.php?idsite="+c.data.piwikId}" alt="" /></p>`}</noscript>
-         */}
+         
         <Script id="test-script" src="https://tools.contrib.com/js/test.js"></Script>
-        
+        */}
       </head>
       <body>
         {children}

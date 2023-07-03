@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 const navigation = ({domain}) => {
-  console.log('domain from navigation.jsx',process.env.NEXT_PUBLIC_VERCEL_URL)
+  
   return (
     <Navbar bg="primary" variant="dark" expand="lg">
       <Container>

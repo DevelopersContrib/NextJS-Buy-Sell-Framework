@@ -29,9 +29,6 @@ export default function Step2({data, err, handleSubmit, handleChange, handleChan
                   </label>
                   <select name="country"  onChange={handleChangeCountry} value={data.country} className="form-select form-select-lg">
                   {countries.map(country=><option key={country.country_id} value={country.country_id}>{country.name}</option>)}
-                    <option></option>
-                    <option value="147">Philippines</option>
-                    <option value="37">Canada</option>
                   </select>
                   {err.validate? (<ErrorBlock msg={err.countryError} />): null}
                 </div>
