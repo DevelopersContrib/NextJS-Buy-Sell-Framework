@@ -3,7 +3,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Logo from '../components/Logo';
 import { getData, getDomain } from '../lib/data';
-
+import Ai from '../components/Ai';
 
 export default async function Home() {
   const c = await getData();
@@ -68,6 +68,8 @@ export default async function Home() {
               </div>
             </div>
           </div>
+          <Ai />
+          
         </div>
       </section>
       <Footer domain={domain} />
