@@ -1,5 +1,6 @@
 import Script from 'next/script';
 import { getDomain,getHost,getScript } from '../../lib/data';
+import ScriptLoader from '@/components/ScriptLoader';
 
 const page = async () => {
 	const domain = getDomain();
@@ -9,6 +10,10 @@ const page = async () => {
 	//const host = getHost();
 	//const referer = await getScript('https://tools.contrib.com/site/gethost');
 	//console.log('referer',referer)
+	//const html = "<script id='referral-script' src='https://www.referrals.com/extension/widget.js?key=195' type='text/javascript'></script>"
+	
+	const html = await getScript("https://e7lq80c199.execute-api.us-west-2.amazonaws.com/api1?key=5c1bde69a9e783c7edc2e603d8b25023&request=getcontent&url=" + encodeURIComponent(domain))
+	console.log('html',html.data.content)
 	return (
 		<>
 			<div >test page</div>
@@ -37,7 +42,10 @@ const page = async () => {
           ))}
         </tbody>
       </table>
-		</>
+
+	  {/*<div dangerouslySetInnerHTML={{__html: html}} />*/}
+		<ScriptLoader html={html.data.content} />
+	</>
   )
 }
 
