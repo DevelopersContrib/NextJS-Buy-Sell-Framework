@@ -68,7 +68,7 @@ const Container = ({domain, logo, countries}) => {
                         </div>
                       </div>
                     </div>
-                    <Form countries={countries} setSuccess={setSuccess} setEmailCode={setEmailCode}  />
+                    <Form domain={domain} countries={countries} setSuccess={setSuccess} setEmailCode={setEmailCode}  />
                   </div>
                 </div>
               </>

@@ -1,14 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getDomain } from '../../lib/data';
 import Step1 from './Step1';
 import Step2 from './Step2';
 import Step3 from './Step3';
 import LoadingState from '../LoadingState';
 
-export default function PartnerForm ({countries, setSuccess, setEmailCode}) {
-  const domain = getDomain();
+export default function PartnerForm ({domain, countries, setSuccess, setEmailCode}) {
   const initialValues = {
     domain:domain,
     step: 1,
