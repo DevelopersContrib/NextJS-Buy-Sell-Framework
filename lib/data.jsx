@@ -8,8 +8,7 @@ export function getDomain() {
   const headersList = headers()
   const referrer = headersList.get('host')
   const domainName = referrer.includes("localhost") ? DOMAIN : referrer
-  console.log('referrer',referrer)
-  return domainName 
+  return domainName.replace('www.',''); 
 }
 
 export async function getData() {
