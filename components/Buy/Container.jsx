@@ -29,7 +29,7 @@ const [success, setSuccess] = useState(false);
               <div className="col-xl-6 tw-flex">
                 <div className="row tw-items-center">
                   <div className="col-xl-8 text-xl-end">
-                    <h4>Select Your Domain</h4>
+                    <h4 className="tw-text-2xl tw-font-medium">Select Your Domain</h4>
                     <p className="small">Search Ecorp&apos;s database for the ultimate domain name for your business, project or brand.</p>
                   </div>
                   <div className="col-xl-4">
@@ -55,7 +55,7 @@ const [success, setSuccess] = useState(false);
                     />
                   </div>
                   <div className="col-xl-8">
-                    <h4>Submit your best offer</h4>
+                    <h4 className="tw-text-2xl tw-font-medium">Submit your best offer</h4>
                     <p className="small">We&apos;ll let you know if it&apos;s too low for consideration.</p>
                   </div>
                 </div>
@@ -63,7 +63,7 @@ const [success, setSuccess] = useState(false);
               <div className="col-xl-6 tw-flex">
                 <div className="row tw-items-center">
                   <div className="col-xl-8 text-xl-end">
-                    <h4>Agree to the terms</h4>
+                    <h4 className="tw-text-2xl tw-font-medium">Agree to the terms</h4>
                     <p className="small">Once the price is decided, agree to the terms of the domain name sales agreement.</p>
                   </div>
                   <div className="col-xl-4">
@@ -89,7 +89,7 @@ const [success, setSuccess] = useState(false);
                     />
                   </div>
                   <div className="col-xl-8">
-                    <h4>Launch your website</h4>
+                    <h4 className="tw-text-2xl tw-font-medium">Launch your website</h4>
                     <p className="small">Once payment has been confirmed the owner will transfer the domain to you.</p>
                   </div>
                 </div>

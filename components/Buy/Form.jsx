@@ -128,7 +128,7 @@ function BuyForm({domain, countries, setSuccess}) {
 						{/* Start:: Step 1 */}
 						<div className="row">
 							<div className="col-xl-12 tw-text-center mb-3">
-								<h2>Partner with {domain} today</h2>
+								<h2 className="tw-text-3xl tw-font-medium">Partner with {domain} today</h2>
 								<p>
 										Create your Profile to make a partnership
 								</p>
@@ -210,7 +210,7 @@ function BuyForm({domain, countries, setSuccess}) {
 						</div>
 					</div>
 						<div className="tw-flex-[0_0_50%] tw-bg-[#eaeaea] tw-p-12 tw-flex tw-justify-center tw-items-center tw-flex-col">
-						<h2 className="mb-4 tw-text-center tw-text-4xl">
+						<h2 className="mb-4 tw-text-center tw-text-4xl tw-font-medium">
 							A great domain name is a great asset
 						</h2>
 						<p className='tw-text-center'>

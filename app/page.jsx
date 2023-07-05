@@ -29,7 +29,7 @@ export default async function Home() {
           <div className="row gy-3 gx-md-3">
             <div className="col-xl-4">
               <div className="tw-bg-white tw-p-8 tw-text-center tw-rounded-md tw-text-black">
-                <h3 className="mb-0 tw-uppercase ">
+                <h3 className="mb-0 tw-uppercase tw-text-3xl tw-font-medium">
                   Buy
                 </h3>
                 <h4 className="tw-flex tw-mb-5 tw-flex-col tw-text-lg tw-font-medium tw-text-gray-500">
@@ -43,7 +43,7 @@ export default async function Home() {
             </div>
             <div className="col-xl-4">
               <div className="tw-bg-white tw-p-8 tw-text-center tw-rounded-md tw-text-black">
-                <h3 className="mb-0 tw-uppercase ">
+                <h3 className="mb-0 tw-uppercase  tw-text-3xl tw-font-medium">
                   PARTNER
                 </h3>
                 <h4 className="tw-flex tw-mb-5 tw-flex-col tw-text-lg tw-font-medium tw-text-gray-500">
@@ -57,7 +57,7 @@ export default async function Home() {
             </div>
             <div className="col-xl-4">
               <div className="tw-bg-white tw-p-8 tw-text-center tw-rounded-md tw-text-black">
-                <h3 className="mb-0 tw-uppercase ">
+                <h3 className="mb-0 tw-uppercase  tw-text-3xl tw-font-medium">
                   JOIN
                 </h3>
                 <h4 className="tw-flex tw-mb-5 tw-flex-col tw-text-lg tw-font-medium tw-text-gray-500">

@@ -29,7 +29,7 @@ const Container = ({domain, logo, countries}) => {
                 <div className="col-xl-12">
                   <div className="tw-flex tw-flex-col lg:tw-flex-row tw-w-full mb-3">
                     <div className="tw-flex-[0_0_50%] tw-bg-[#eaeaea] tw-p-12 tw-flex tw-justify-center tw-flex-col">
-                      <h2 className="text-lg-end mb-4">
+                      <h2 className="text-lg-end mb-4 tw-text-3xl tw-font-medium">
                         Invest in a great domain name as part of your brand strategy and take your business to the next level
                       </h2>
                       <div className="row">
