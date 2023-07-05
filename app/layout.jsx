@@ -6,7 +6,7 @@ import Script from 'next/script';
 export async function generateMetadata({ params, searchParams }, parent) {
   const c = await getData();
 	return {
-		title: c.data.title,
+		title: c.data.title===''?'Welcome to '+c.data.domainName:c.data.title,
 		description: c.data.description,
     keywords: c.data.keywords,
     author: c.data.author
