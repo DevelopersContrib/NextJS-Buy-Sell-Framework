@@ -7,7 +7,7 @@ export default function Step1({domain, data, err, handleSubmit, handleChange, em
             {/* Start:: Step 1 */}
             <div className="row ">
                 <div className="col-xl-12 tw-text-center mb-3">
-                <h2>Partner with {domain} today</h2>
+                <h2 className="tw-text-3xl tw-font-medium">Partner with {domain} today</h2>
                 <p>
                 Create your Profile to make a partnership
                 </p>

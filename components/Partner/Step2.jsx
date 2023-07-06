@@ -6,7 +6,7 @@ export default function Step2({data, err, handleSubmit, handleChange, handleChan
           {/* Start:: Step 2 */}
           <div className="row">
               <div className="col-xl-12 tw-text-center mb-3">
-                <h2>Complete your Partnership</h2>
+                <h2 className='tw-text-3xl tw-font-medium'>Complete your Partnership</h2>
                 <p>
                 Please complete your profile in order to present your partnership to the domain owner.
                 </p>
