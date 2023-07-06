@@ -7,6 +7,7 @@ const page = async () => {
 	const VERCEL_URL = process.env.VERCEL_URL;
 	const NEXT_PUBLIC_VERCEL_URL = process.env.NEXT_PUBLIC_VERCEL_URL;
 	const dictionary = Object.entries(process.env);
+	const CONTRIB_API1 = process.env.CONTRIB_API1;
 	//const host = getHost();
 	//const referer = await getScript('https://tools.contrib.com/site/gethost');
 	//console.log('referer',referer)
@@ -17,6 +18,8 @@ const page = async () => {
 	return (
 		<>
 			<div >test page</div>
+			<div>api {CONTRIB_API1}</div>
+
 			{/*<p>referer: {referer}</p>
 			<p>host: {host}</p>*/}
 			<p>{VERCEL_URL}</p>
@@ -26,7 +29,8 @@ const page = async () => {
       <div className="fheader-script"></div>
 			*/}
 
-<			table>
+		{/*
+		<table>
         <thead>
           <tr>
             <th>VAR</th>
@@ -42,7 +46,7 @@ const page = async () => {
           ))}
         </tbody>
       </table>
-
+		*/}
 	  {/*<div dangerouslySetInnerHTML={{__html: html}} />*/}
 		<ScriptLoader html={html.data.content} />
 	</>
