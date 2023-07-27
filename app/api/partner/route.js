@@ -25,9 +25,9 @@ export const POST = async (request) => {
 			params.append('message', data.message);
 			params.append('company', data.companytitle);
 			params.append('companydesc', data.companydesc);
-			
+			console.log('params',params)
 			const saveRes = await axios.post('https://www.contrib.com/forms/save_partner', params);
-			
+			console.log('saveRes.data',saveRes.data)
 			if(saveRes.data.success){
 				const emailCode = saveRes.data.email;
 				
@@ -49,7 +49,7 @@ export const POST = async (request) => {
 				
 				return new Response(JSON.stringify({status:true,code:emailCode, addlead:addleadRes.data}), { status: 201 })
 			}else{
-				return new Response(JSON.stringify({status:false,error:"Failed to save partner"}), { status: 201 });
+				return new Response(JSON.stringify({status:false,'result': saveRes.data, error:"Failed to save partner"}), { status: 201 });
 			}
 		}else{
 			return new Response(JSON.stringify({status:false,error:'Email already exists'}), { status: 201 })

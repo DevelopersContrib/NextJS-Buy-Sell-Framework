@@ -24,7 +24,7 @@ export default function PartnerForm ({domain, countries, setSuccess, setEmailCod
     website: "",
     phone: "",
     country: countries[0].country_id,
-    country_text: '',
+    country_text: countries[0].name,
     city: "",
   
     //Step 3
@@ -76,7 +76,7 @@ export default function PartnerForm ({domain, countries, setSuccess, setEmailCod
           fnameError: data.fname?'':"First name is required.",
           lnameError: data.lname?'':"Last name is required.",
           emailError: (data.email?'':"Email is required") || (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email) ?"":"Invalid Email"),
-          passwordError: data.password?'':"Password is required.",
+          passwordError: (data.password?'':"Password is required.") || (data.password.length <6?'Password has less than 5 characters.':''),
           cpasswordError: (data.cpassword?'':"Confirm password is required.") || (data.password!==data.cpassword?'Confirm password did not match.':""),
           messageError: data.message?'':"Message is required."
         }
