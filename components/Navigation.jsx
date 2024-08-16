@@ -18,8 +18,11 @@ const navigation = ({domain}) => {
             <Nav.Link href={'https://www.contrib.com/to/'+domain} target="_blank">
               Contribute
             </Nav.Link>
-            <Link href="/partner" className='nav-link'>
+            <Link href="/partner" className='nav-link' r>
             Partner
+            </Link>
+            <Link href={"https://advertise.ipartner.com/?domain="+domain} className='nav-link' target='_blank'>
+            Advertise
             </Link>
             <Link href="/about" className='nav-link'>
             About
