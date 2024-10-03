@@ -2,6 +2,7 @@ import Link from "next/link"
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Logo from '../components/Logo';
+import BlogSection from "@/components/BlogSection";
 import { getData, getDomain, getScript } from '../lib/data';
 import Ai from '../components/Ai';
 import ScriptLoader from '../components/ScriptLoader';
@@ -71,7 +72,7 @@ export default async function Home() {
             </div>
           </div>
           <Ai />
-          
+          <BlogSection/>
         </div>
       </section>
       <ScriptLoader html={html.data.content} />
