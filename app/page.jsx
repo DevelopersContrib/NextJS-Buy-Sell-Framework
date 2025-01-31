@@ -6,6 +6,7 @@ import { getData, getDomain, getScript } from '../lib/data';
 import ScriptLoader from '../components/ScriptLoader';
 import { FaShoppingCart, FaHandshake, FaUsers } from 'react-icons/fa';
 import StaticCTAButton from "@/components/LatestCTA";
+import FomoPopup from "@/components/TokenSalePopup";
 
 export default async function Home() {
   const c = await getData();
@@ -85,6 +86,7 @@ export default async function Home() {
         </div>
       </section>
       <ScriptLoader html={html.data.content} />
+      <FomoPopup />
       <Footer domain={domain} />
     </>
   )

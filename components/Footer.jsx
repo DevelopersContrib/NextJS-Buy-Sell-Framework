@@ -1,85 +1,67 @@
 import Link from "next/link"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse,faBookmark,faBook,faCube } from '@fortawesome/free-solid-svg-icons'
 
-const Footer = ({domain}) => {
-  
+const Footer = ({ domain }) => {
   return (
-    <footer className="tw-text-white tw-bg-black tw-py-6">
-      <div className="container">
-        <div className="row">
-          <div className="col-xl-6">
-            &copy; {new Date().getFullYear()} {domain}. All Rights Reserved.
-          </div>
-          <div className="col-xl-6 text-md-end">
-            <ul className="mb-0 list-inline">
-              <li className="list-inline-item">
-                <Link href="/" className="tw-no-underline tw-capitalize tw-text-white tw-inline-flex tw-items-center hover:tw-text-white/75">
-                  <FontAwesomeIcon icon={faHouse} className="tw-w-4 tw-h-4 tw-mr-2" />
-                  <span>
-                    home
-                  </span>
-                </Link>
-              </li>
-              <li className="list-inline-item">
-                <Link href="/about" className="tw-no-underline tw-capitalize tw-text-white tw-inline-flex tw-items-center hover:tw-text-white/75">
-                  <FontAwesomeIcon icon={faBookmark} className="tw-w-4 tw-h-4 tw-mr-2" />
-                  <span>
-                    about us
-                  </span>
-                </Link>
-              </li>
-              <li className="list-inline-item">
-                <Link href="/terms" className="tw-no-underline tw-capitalize tw-text-white tw-inline-flex tw-items-center hover:tw-text-white/75">
-                  <FontAwesomeIcon icon={faBook} className="tw-w-4 tw-h-4 tw-mr-2" />
-                  <span>
-                    terms
-                  </span>
-                </Link>
-              </li>
-              <li className="list-inline-item">
-                <Link href="/privacy" className="tw-no-underline tw-capitalize tw-text-white tw-inline-flex tw-items-center hover:tw-text-white/75">
-                  <FontAwesomeIcon icon={faCube} className="tw-w-4 tw-h-4 tw-mr-2" />
-                  <span>
-                    privacy
-                  </span>
-                </Link>
-              </li>
-              <li className="list-inline-item">
-                <Link href={`https://domaindirectory.com/servicepage/?domain=${domain}`} className="tw-no-underline tw-capitalize tw-text-white tw-inline-flex tw-items-center hover:tw-text-white/75">
-                  <FontAwesomeIcon icon={faBookmark} className="tw-w-4 tw-h-4 tw-mr-2" />
-                  <span>
-                    Build
-                  </span>
-                </Link>
-              </li>
-              <li className="list-inline-item">
-                <Link href={`https://domaindirectory.com/servicepage/?domain=${domain}`} className="tw-no-underline tw-capitalize tw-text-white tw-inline-flex tw-items-center hover:tw-text-white/75">
-                  <FontAwesomeIcon icon={faBookmark} className="tw-w-4 tw-h-4 tw-mr-2" />
-                  <span>
-                    invest
-                  </span>
-                </Link>
-              </li>
-              <li className="list-inline-item">
-                <Link href={`https://domaindirectory.com/servicepage/?domain=${domain}`} className="tw-no-underline tw-capitalize tw-text-white tw-inline-flex tw-items-center hover:tw-text-white/75">
-                  <FontAwesomeIcon icon={faBookmark} className="tw-w-4 tw-h-4 tw-mr-2" />
-                  <span>
-                    manage
-                  </span>
-                </Link>
-              </li>
-              <li className="list-inline-item">
-                <Link href={`https://domaindirectory.com/servicepage/?domain=${domain}`} className="tw-no-underline tw-capitalize tw-text-white tw-inline-flex tw-items-center hover:tw-text-white/75">
-                  <FontAwesomeIcon icon={faBookmark} className="tw-w-4 tw-h-4 tw-mr-2" />
-                  <span>
-                    monetize
-                  </span>
-                </Link>
-              </li>
-            </ul>
-          </div>
+    <footer className="tw-bg-black/90 tw-text-gray-300 tw-py-8">
+      <div className="container tw-grid tw-grid-cols-3 tw-gap-8">
+        <div>
+          <h4 className="tw-text-lg tw-font-semibold tw-mb-4">Company</h4>
+          <ul className="tw-list-none tw-space-y-2">
+            <li>
+              <Link href="/" className="tw-no-underline tw-text-gray-300 hover:tw-text-white">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className="tw-no-underline tw-text-gray-300 hover:tw-text-white">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link href="/terms" className="tw-no-underline tw-text-gray-300 hover:tw-text-white">
+                Terms
+              </Link>
+            </li>
+            <li>
+              <Link href="/privacy" className="tw-no-underline tw-text-gray-300 hover:tw-text-white">
+                Privacy
+              </Link>
+            </li>
+          </ul>
         </div>
+        <div>
+          <h4 className="tw-text-lg tw-font-semibold tw-mb-4">Services</h4>
+          <ul className="tw-list-none tw-space-y-2">
+            <li>
+              <Link href={`https://domaindirectory.com/servicepage/?domain=${domain}`} className="tw-no-underline tw-text-gray-300 hover:tw-text-white">
+                Build
+              </Link>
+            </li>
+            <li>
+              <Link href={`https://domaindirectory.com/servicepage/?domain=${domain}`} className="tw-no-underline tw-text-gray-300 hover:tw-text-white">
+                Invest
+              </Link>
+            </li>
+            <li>
+              <Link href={`https://domaindirectory.com/servicepage/?domain=${domain}`} className="tw-no-underline tw-text-gray-300 hover:tw-text-white">
+                Manage
+              </Link>
+            </li>
+            <li>
+              <Link href={`https://domaindirectory.com/servicepage/?domain=${domain}`} className="tw-no-underline tw-text-gray-300 hover:tw-text-white">
+                Monetize
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="tw-text-lg tw-font-semibold tw-mb-4">Contact</h4>
+          <p className="tw-text-sm">Email: contact@{domain}</p>
+          <p className="tw-text-sm">Phone: +1 (555) 123-4567</p>
+        </div>
+      </div>
+      <div className="tw-text-center tw-mt-8">
+        &copy; {new Date().getFullYear()} {domain}. All Rights Reserved.
       </div>
     </footer>
   )
