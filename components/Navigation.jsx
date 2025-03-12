@@ -17,29 +17,29 @@ const Navigation = ({ domain }) => {
               href="https://agentdao.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="tw-text-blue-600 tw-font-semibold hover:tw-underline"
+              className="tw-text-blue-600 tw-font-semibold tw-no-underline"
             >
               Powered by AgentDao
             </a>
           </div>
 
           <div className="tw-flex tw-items-center tw-gap-4">
-            <Link
-              href={`https://contrib.com/to/${domain}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="tw-flex tw-items-center tw-bg-black tw-text-white tw-px-3 tw-py-1 tw-rounded-md hover:tw-bg-gray-800 transition"
-            >
-              Register
-            </Link>
-            <Link
-              href="https://adao.ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="tw-flex tw-items-center tw-bg-black tw-text-white tw-px-3 tw-py-1 tw-rounded-md hover:tw-bg-gray-800 transition"
-            >
-              Buy Adao
-            </Link>
+          <Link
+            href={`https://contrib.com/to/${domain}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="tw-no-underline tw-flex tw-items-center tw-bg-black tw-text-white tw-px-3 tw-py-1 tw-rounded-md hover:tw-bg-gray-800 transition"
+          >
+            Register
+          </Link>
+          <Link
+            href="https://adao.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="tw-no-underline tw-flex tw-items-center tw-bg-black tw-text-white tw-px-3 tw-py-1 tw-rounded-md hover:tw-bg-gray-800 transition"
+          >
+            Buy Adao
+          </Link>
             <button
               onClick={() => setShowTopHeader(false)}
               className="tw-text-black hover:tw-text-white tw-text-lg tw-font-bold btn btn-dark"
