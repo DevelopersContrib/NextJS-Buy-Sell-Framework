@@ -8,6 +8,7 @@ import { FaShoppingCart, FaHandshake, FaUsers } from "react-icons/fa";
 import StaticCTAButton from "@/components/LatestCTA";
 import FomoPopup from "@/components/TokenSalePopup";
 import BlogList from "@/modules/blog/BlogList";
+import Ai from '../components/Ai';
 
 export default async function Home() {
   const c = await getData();
@@ -111,6 +112,7 @@ export default async function Home() {
           </div>
 
           <StaticCTAButton />
+          <Ai />
           <BlogList theme="white" />
         </div>
       </section>
