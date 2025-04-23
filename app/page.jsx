@@ -40,10 +40,7 @@ export default async function Home() {
               <Logo
                 domain={domain}
                 logo={c.data.logo}
-              />
-              <p className="tw-text-lg tw-font-light tw-mt-4">
-                Proud Member of CONTRIB | Powered by VNOC
-              </p>
+              />             
             </div>
           </div>
           <div className="row gy-3 gx-md-3">
