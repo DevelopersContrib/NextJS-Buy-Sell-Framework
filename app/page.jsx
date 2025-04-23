@@ -112,7 +112,7 @@ export default async function Home() {
           </div>
 
           <StaticCTAButton />
-          <Ai />
+          
           <BlogList theme="white" />
         </div>
       </section>
