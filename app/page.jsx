@@ -1,14 +1,14 @@
+import StaticCTAButton from "@/components/LatestCTA";
 import Link from "next/link";
-import Navigation from "../components/Navigation";
+import { FaHandshake, FaShoppingCart, FaUsers } from "react-icons/fa";
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
-import { getData, getDomain, getScript } from "../lib/data";
+import Navigation from "../components/Navigation";
 import ScriptLoader from "../components/ScriptLoader";
-import { FaShoppingCart, FaHandshake, FaUsers } from "react-icons/fa";
-import StaticCTAButton from "@/components/LatestCTA";
-import FomoPopup from "@/components/TokenSalePopup";
+import { getData, getDomain, getScript } from "../lib/data";
+// import FomoPopup from "@/components/TokenSalePopup";
+import Notification from "@/components/notification/Notification";
 import BlogList from "@/modules/blog/BlogList";
-import Ai from '../components/Ai';
 
 export default async function Home() {
   const c = await getData();
@@ -114,7 +114,8 @@ export default async function Home() {
         </div>
       </section>
       <ScriptLoader html={html.data.content} />
-      <FomoPopup />
+      {/* <FomoPopup /> */}
+      <Notification />
       <Footer domain={domain} />
     </>
   );

@@ -44,6 +44,7 @@ const nextConfig = {
       "vbot-images.s3.us-east-1.amazonaws.com",
       "avatars.dicebear.com",
       "adao.ai",
+      "randomuser.me",
     ],
   },
   env: {
