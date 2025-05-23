@@ -45,6 +45,7 @@ const nextConfig = {
       "avatars.dicebear.com",
       "adao.ai",
       "randomuser.me",
+      "i.pravatar.cc",
     ],
   },
   env: {
