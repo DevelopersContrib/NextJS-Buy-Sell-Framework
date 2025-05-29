@@ -5,7 +5,7 @@ import { fetcher } from "@/lib/hooks/useFetcher";
 const baseURL = getEnvVar(ENV_VAR.API_URL);
 
 async function handleRequest(req, method) {
-  console.log("Full request URL:", `${baseURL}${req.url}`);
+  // console.log("Full request URL:", `${baseURL}${req.url}`);
   try {
     const { url, payload, config } =
       method === "GET"
