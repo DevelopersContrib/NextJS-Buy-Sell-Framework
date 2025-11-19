@@ -3,6 +3,7 @@ import './globals.css';
 import { getData, getDomain } from '../lib/data';
 import Script from 'next/script';
 import { Metadata } from 'next';
+import First100FoundersModalWrapper from "@/components/First100FoundersModalWrapper";
 
 
 
@@ -90,6 +91,7 @@ export default async function RootLayout({ children }) {
         */}
       </head>
       <body>
+        <First100FoundersModalWrapper />
         {children}
       </body>
     </html>
