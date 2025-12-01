@@ -333,7 +333,7 @@ export const First100FoundersModal = ({
         </button>
 
         {/* Main Content */}
-        <div className="tw-max-w-6xl tw-w-full tw-space-y-8 md:tw-space-y-12">
+        <div className="tw-max-w-6xl tw-w-full tw-space-y-8 md:tw-space-y-10">
           {/* Header Section */}
           <div className="tw-text-center tw-space-y-6 tw-mt-20 md:tw-mt-32">
             <div className="tw-inline-flex tw-items-center tw-space-x-2 tw-bg-gradient-to-r tw-from-yellow-400 tw-to-orange-500 tw-rounded-full tw-px-8 tw-py-3 tw-shadow-2xl tw-mb-4">
@@ -343,7 +343,7 @@ export const First100FoundersModal = ({
               </span>
             </div>
             
-            <h1 className="tw-text-5xl md:tw-text-7xl lg:tw-text-8xl tw-font-extrabold tw-text-white tw-mb-6 tw-leading-tight">
+            <h1 className="tw-text-5xl md:tw-text-7xl tw-font-extrabold tw-text-white tw-mb-6 tw-leading-tight">
               <span
                 className="tw-bg-clip-text tw-text-transparent"
                 style={{
@@ -371,7 +371,7 @@ export const First100FoundersModal = ({
             {defaultBenefits.map((benefit, index) => (
               <div 
                 key={index}
-                className="tw-bg-white tw-bg-opacity-5 tw-rounded-2xl tw-shadow-xl tw-border tw-border-white/20 tw-p-8 tw-flex tw-items-center tw-space-x-4 tw-transition-all tw-duration-300 hover:tw-shadow-2xl hover:tw-scale-105"
+                className="tw-bg-white tw-bg-opacity-5 tw-rounded-2xl tw-shadow-xl tw-border tw-border-white/20 tw-p-4 tw-flex tw-items-center tw-space-x-4 tw-transition-all tw-duration-300 hover:tw-shadow-2xl hover:tw-scale-105"
               >
                 <div className={`tw-flex-shrink-0 ${benefit.color ? 'tw-' + benefit.color : 'tw-text-white'} tw-p-4 tw-bg-white/10 tw-rounded-xl tw-shadow-md`}>
                   {benefit.icon}
@@ -406,7 +406,7 @@ export const First100FoundersModal = ({
           </div>
 
           {/* Footer Note */}
-          <p className="tw-text-center tw-text-white/60 tw-text-lg md:tw-text-xl tw-mt-8">
+          <p className="tw-text-center tw-text-white/60 tw-text-lg md:tw-text-xl tw-mt-6">
             {content?.footerText || '🔥 Only 100 slots available • Act fast before they\'re gone!'}
           </p>
         </div>
