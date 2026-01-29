@@ -154,11 +154,11 @@ export const First100FoundersModal = ({
     setHasShown(true);
   };
 
-  // Default benefits
+  // Default benefits (cards)
   const defaultBenefits = benefits || [
     { 
       icon: <Rocket className="tw-w-8 tw-h-8 tw-text-blue-300" />, 
-      text: 'Full platform access on January 15, 2026', 
+      text: 'Full Beta Launch - Now Live', 
       color: 'text-blue-300', 
       bg: 'from-blue-500/20 to-cyan-500/20' 
     },
@@ -336,14 +336,7 @@ export const First100FoundersModal = ({
         <div className="tw-max-w-6xl tw-w-full tw-space-y-8 md:tw-space-y-10">
           {/* Header Section */}
           <div className="tw-text-center tw-space-y-6 tw-mt-20 md:tw-mt-32">
-            <div className="tw-inline-flex tw-items-center tw-space-x-2 tw-bg-gradient-to-r tw-from-yellow-400 tw-to-orange-500 tw-rounded-full tw-px-8 tw-py-3 tw-shadow-2xl tw-mb-4">
-              <Sparkles className="tw-w-6 tw-h-6 tw-text-white tw-animate-pulse" />
-              <span className="tw-text-white tw-font-bold tw-text-base tw-uppercase tw-tracking-wider">
-                {content?.title || 'Limited Time Offer'}
-              </span>
-            </div>
-            
-            <h1 className="tw-text-5xl md:tw-text-7xl tw-font-extrabold tw-text-white tw-mb-6 tw-leading-tight">
+            <h1 className="tw-text-5xl md:tw-text-7xl tw-font-extrabold tw-text-white tw-mb-4 tw-leading-tight">
               <span
                 className="tw-bg-clip-text tw-text-transparent"
                 style={{
@@ -354,15 +347,16 @@ export const First100FoundersModal = ({
                   textFillColor: 'transparent',
                 }}
               >
-                🎉 Be One of the First 100 Founders!
+                {content?.title || 'VentureOS Beta Now Live'}
               </span>
             </h1>
             
             <p className="tw-text-2xl md:tw-text-3xl lg:tw-text-4xl tw-text-white/90 tw-font-semibold tw-mb-4">
-              {content?.description || "Don't wait for the public launch!"}
+              {content?.subtitle || 'We Are Now in Full Beta Launch'}
             </p>
+            
             <p className="tw-text-xl md:tw-text-2xl tw-text-white/70 tw-max-w-3xl tw-mx-auto">
-              Secure your spot now and get exclusive access to VentureOS platform with incredible benefits.
+              {content?.description || 'Join the beta and experience the future of business building with AI-powered tools. Full platform access is now available!'}
             </p>
           </div>
 
@@ -394,7 +388,7 @@ export const First100FoundersModal = ({
                 textDecoration: 'none',
               }}
             >
-              <span>{content?.ctaText || 'Reserve My Founder Spot'}</span>
+              <span>{content?.ctaText || 'Access Beta Now'}</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="tw-w-6 tw-h-6 tw-group-hover:tw-translate-x-2 tw-transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
             </a>
             <button
@@ -407,7 +401,7 @@ export const First100FoundersModal = ({
 
           {/* Footer Note */}
           <p className="tw-text-center tw-text-white/60 tw-text-lg md:tw-text-xl tw-mt-6">
-            {content?.footerText || '🔥 Only 100 slots available • Act fast before they\'re gone!'}
+            {content?.footerText || 'Limited beta access • Join now to secure your spot!'}
           </p>
         </div>
       </div>
