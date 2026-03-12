@@ -17,7 +17,7 @@ const Navigation = ({ domain }) => {
               href="https://agentdao.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="tw-text-blue-600 tw-font-semibold tw-no-underline"
+              className="tw-text-[#673DE6] tw-font-semibold tw-no-underline"
             >
               Powered by AgentDao
             </a>
@@ -51,20 +51,20 @@ const Navigation = ({ domain }) => {
       )}
 
       {showTopHeader && (
-        <section className="tw-w-full tw-bg-[#1A122A] tw-text-white tw-fixed tw-top-0 tw-z-50">
+        <section className="tw-w-full tw-bg-[#1a1b20] tw-text-white tw-fixed tw-top-0 tw-z-50 tw-border-b tw-border-[#673DE6]/25">
           <div className="container tw-overflow-hidden tw-items-center tw-flex">
             <marquee
               direction="left"
               height="33px"
               className="tw-text-sm tw-flex tw-gap-2 tw-items-center"
             >
-              <span className="tw-inline-flex tw-text-[#00f6ff] tw-mr-2">
+              <span className="tw-inline-flex tw-text-[#a78bfa] tw-mr-2">
                 Flash News!
               </span>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                class="tw-text-white/90 hover:tw-text-white tw-transition-colors tw-inline-flex tw-items-center blink"
+                className="tw-text-white/90 hover:tw-text-white tw-transition-colors tw-inline-flex tw-items-center blink"
                 href={`https://adao.ai/?referral=${domain}`}
               >
                 ADAO token is dropping to your Base chain soon! Get ADAO today

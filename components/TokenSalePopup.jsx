@@ -54,7 +54,7 @@ const FomoPopup = () => {
           href="https://adao.ai"
           target="_blank"
           rel="noopener noreferrer"
-          className="tw-ml-2 tw-text-blue-500 tw-underline"
+          className="tw-ml-2 tw-text-[#673DE6] tw-underline"
         >
           Check it out!
         </Link>

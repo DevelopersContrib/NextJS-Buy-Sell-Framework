@@ -157,10 +157,10 @@ export const First100FoundersModal = ({
   // Default benefits (cards)
   const defaultBenefits = benefits || [
     { 
-      icon: <Rocket className="tw-w-8 tw-h-8 tw-text-blue-300" />, 
+      icon: <Rocket className="tw-w-8 tw-h-8 tw-text-violet-300" />, 
       text: 'Full Beta Launch - Now Live', 
-      color: 'text-blue-300', 
-      bg: 'from-blue-500/20 to-cyan-500/20' 
+      color: 'text-violet-300', 
+      bg: 'from-violet-500/20 to-purple-500/20' 
     },
     { 
       icon: <Zap className="tw-w-8 tw-h-8 tw-text-purple-300" />, 
@@ -273,7 +273,7 @@ export const First100FoundersModal = ({
           bottom: 0,
           width: '100%',
           height: '100%',
-          background: 'linear-gradient(to bottom right, #581c87, #1e3a8a, #312e81)',
+          background: 'linear-gradient(to bottom right, #581c87, #4c1d95, #312e81)',
           zIndex: 1,
           pointerEvents: 'none'
         }}
@@ -282,7 +282,7 @@ export const First100FoundersModal = ({
         <div 
           className="tw-absolute tw-inset-0"
           style={{
-            background: 'linear-gradient(to right, rgba(234, 179, 8, 0.2), rgba(168, 85, 247, 0.2), rgba(59, 130, 246, 0.2))'
+            background: 'linear-gradient(to right, rgba(234, 179, 8, 0.2), rgba(168, 85, 247, 0.2), rgba(139, 92, 246, 0.2))'
           }}
         ></div>
         
@@ -296,7 +296,7 @@ export const First100FoundersModal = ({
         <div 
           className="tw-absolute tw-bottom-0 tw-left-0 tw-w-96 tw-h-96 tw-rounded-full tw-blur-3xl"
           style={{
-            background: 'linear-gradient(to bottom right, rgba(168, 85, 247, 0.3), rgba(59, 130, 246, 0.3))'
+            background: 'linear-gradient(to bottom right, rgba(168, 85, 247, 0.3), rgba(139, 92, 246, 0.3))'
           }}
         ></div>
         <div 
@@ -340,7 +340,7 @@ export const First100FoundersModal = ({
               <span
                 className="tw-bg-clip-text tw-text-transparent"
                 style={{
-                  background: 'linear-gradient(to right, rgb(253, 224, 71), rgb(255, 255, 255), rgb(147, 197, 253))',
+                  background: 'linear-gradient(to right, rgb(253, 224, 71), rgb(255, 255, 255), rgb(196, 181, 253))',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
@@ -381,12 +381,7 @@ export const First100FoundersModal = ({
               href="https://www.ventureos.com/first100founders"
               target="_blank"
               rel="noopener noreferrer"
-              className="tw-group tw-px-12 tw-py-6 tw-bg-gradient-to-r tw-from-purple-600 tw-via-blue-600 tw-to-indigo-600 tw-text-white tw-font-bold tw-text-xl md:tw-text-2xl tw-rounded-2xl hover:tw-from-purple-700 hover:tw-via-blue-700 hover:tw-to-indigo-700 tw-transition-all tw-duration-300 tw-shadow-2xl hover:tw-shadow-purple-500/50 tw-transform hover:tw-scale-110 tw-flex tw-items-center tw-space-x-3 tw-w-full sm:tw-w-auto tw-justify-center"
-              style={{
-                background: 'linear-gradient(to right, #9333ea, #2563eb, #4f46e5)',
-                border: 'none',
-                textDecoration: 'none',
-              }}
+              className="tw-group tw-px-12 tw-py-6 tw-bg-[#36373E] hover:tw-bg-[#44454e] tw-text-white tw-font-bold tw-text-xl md:tw-text-2xl tw-rounded-2xl tw-transition-all tw-duration-300 tw-shadow-2xl hover:tw-shadow-[#36373E]/35 tw-transform hover:tw-scale-105 tw-flex tw-items-center tw-space-x-3 tw-w-full sm:tw-w-auto tw-justify-center"
             >
               <span>{content?.ctaText || 'Access Beta Now'}</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="tw-w-6 tw-h-6 tw-group-hover:tw-translate-x-2 tw-transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>

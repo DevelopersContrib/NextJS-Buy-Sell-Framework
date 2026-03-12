@@ -13,6 +13,12 @@ module.exports = {
         mint: {
           500: "#3EB489", // Add your desired mint color here
         },
+        primary: {
+          DEFAULT: "#673DE6",
+          hover: "#7c5cf0",
+        },
+        surface: "#24252d",
+        page: "#24252d",
       },
     },
   },

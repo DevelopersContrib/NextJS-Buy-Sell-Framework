@@ -1,14 +1,67 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap');
 
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --page-bg: #24252d;
+  --surface: #24252d;
+  --surface-hover: #2d2e36;
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --accent: #673DE6;
+  --accent-hover: #7c5cf0;
+  --accent-muted: rgba(103, 61, 230, 0.5);
+  --hero-mesh-1: rgba(103, 61, 230, 0.2);
+  --hero-mesh-2: rgba(103, 61, 230, 0.12);
+  --hero-mesh-3: rgba(103, 61, 230, 0.08);
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
 
-body{
-  font-family: 'Open Sans', sans-serif !important;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans) !important;
+  background-color: var(--page-bg);
   padding-top: 33px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Modern hero background: dark gradient mesh + subtle grid */
+.hero-mesh {
+  background-color: var(--surface);
+  background-image:
+    radial-gradient(ellipse 100% 80% at 50% -20%, var(--hero-mesh-1), transparent 50%),
+    radial-gradient(ellipse 80% 60% at 90% 30%, var(--hero-mesh-2), transparent 45%),
+    radial-gradient(ellipse 70% 50% at 10% 70%, var(--hero-mesh-3), transparent 45%),
+    linear-gradient(180deg, transparent 0%, rgba(36, 37, 45, 0.7) 100%);
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Hero section: bg-static.svg as ::after layer */
+.hero-bg-static::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/bg-static.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.6;
 }
 
 h1,.h1,
@@ -16,25 +69,45 @@ h2,.h2,
 h3,.h3,
 h4,.h4,
 h5,.h5,
-h6,.h6{
-  font-family: 'Poppins', sans-serif !important;
+h6,.h6 {
+  font-family: var(--font-sans) !important;
 }
 
-.font-300{
+.font-300 {
   font-weight: 300 !important;
 }
-.font-400{
+.font-400 {
   font-weight: 400 !important;
 }
-.font-500{
+.font-500 {
   font-weight: 500 !important;
 }
-.font-600{
+.font-600 {
   font-weight: 600 !important;
 }
-.font-700{
+.font-700 {
   font-weight: 700 !important;
 }
-.font-800{
+.font-800 {
   font-weight: 800 !important;
+}
+
+::selection {
+  background: rgba(103, 61, 230, 0.35);
+  color: inherit;
+}
+
+/* Navbar and cards use same surface color for balance */
+.navbar.bg-primary {
+  background-color: var(--surface) !important;
+  border-bottom: 1px solid rgba(103, 61, 230, 0.25);
+}
+.navbar.bg-primary .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.navbar.bg-primary .nav-link {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+.navbar.bg-primary .nav-link:hover {
+  color: var(--accent-hover) !important;
 }

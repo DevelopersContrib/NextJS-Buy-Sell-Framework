@@ -24,14 +24,17 @@ const StaticCTAButton = () => {
           }
         }
       `}</style>
-      <div className="container mx-auto px-4 text-center tw-py-10 tw-bg-black text-mint-500 font-mono relative overflow-hidden">
+      <div className="container mx-auto tw-px-4 tw-py-12 sm:tw-py-16 tw-text-center tw-relative tw-overflow-hidden tw-rounded-2xl tw-bg-[#24252d] tw-border tw-border-[#673DE6]/25 tw-backdrop-blur-sm">
         <motion.div
-          className="absolute inset-0 tw-bg-gradient-to-r tw-from-green-400 tw-to-blue-500"
+          className="tw-absolute tw-inset-0 tw-opacity-25 tw-pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse 60% 40% at 50% 0%, rgba(103, 61, 230, 0.3), transparent 60%)",
+          }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
         />
-        <div className="relative mb-6">
+        <div className="tw-relative tw-mb-6">
           <Image
             src="/images/adaotoken.png"
             alt="ADAO Token"
@@ -40,12 +43,12 @@ const StaticCTAButton = () => {
             className="tw-bounce"
           />
         </div>
-        <h2 className="tw-text-3xl md:tw-text-5xl tw-font-bold mb-6 tw-text-mint-500">Seize the Future with ADAO Tokens!</h2>
-        <p className="text-xl text-white/70 mb-12 max-w-2xl mx-auto">
+        <h2 className="tw-text-2xl sm:tw-text-4xl tw-font-bold tw-mb-4 tw-text-white">Seize the Future with ADAO Tokens!</h2>
+        <p className="tw-text-base sm:tw-text-lg tw-text-gray-400 tw-mb-10 tw-max-w-2xl tw-mx-auto">
           Don&apos;t miss your chance to be part of the next big leap in digital innovation. With our DEX listing set for February, the value of ADAO Tokens is poised to soar. Secure your tokens today and position yourself at the forefront of the digital agent revolution. Act now and join a community that&apos;s shaping the future of decentralized technology.
         </p>
         <button
-          className="tw-bg-gray-800 hover:tw-bg-gray-700 tw-text-white tw-font-bold tw-text-lg tw-px-12 tw-py-6 tw-rounded-xl tw-shadow-lg tw-transform tw-transition-transform tw-duration-300 hover:tw-scale-105"
+          className="tw-bg-[#36373E] hover:tw-bg-[#44454e] tw-text-white tw-font-semibold tw-text-base tw-px-8 tw-py-4 tw-rounded-xl tw-shadow-lg tw-transition-all tw-duration-300 hover:tw-shadow-[#36373E]/35 hover:tw-scale-[1.02] active:tw-scale-[0.98]"
           onClick={() => window.open('https://adao.ai', '_blank')}
         >
           Buy ADAO Tokens Now

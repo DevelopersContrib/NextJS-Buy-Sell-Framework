@@ -81,9 +81,9 @@ const Notification = () => {
         >
           <div className="tw-relative tw-flex tw-items-center tw-bg-white tw-rounded-full tw-shadow-[2px_2px_10px_2px_hsla(0,0%,60%,.2)] lg:tw-px-6 lg:tw-py-4 lg:tw-w-[420px] sm:tw-w-[340px] tw-w-full sm:tw-max-w-[95vw] tw-px-3 tw-py-2 tw-gap-[1rem]">
             {/* Badge */}
-            <span className="tw-absolute -tw-top-6 tw-right-4 tw-text-xs tw-text-indigo-400 tw-flex tw-items-center tw-gap-1 tw-font-medium sm:-tw-top-5 sm:tw-right-2">
+            <span className="tw-absolute -tw-top-6 tw-right-4 tw-text-xs tw-text-violet-400 tw-flex tw-items-center tw-gap-1 tw-font-medium sm:-tw-top-5 sm:tw-right-2">
               Powered by AgentDao
-              <CheckCheck className="tw-w-4 tw-h-4 tw-text-indigo-400" />
+              <CheckCheck className="tw-w-4 tw-h-4 tw-text-violet-400" />
             </span>
 
             {/* Image */}
@@ -99,10 +99,10 @@ const Notification = () => {
 
             {/* Content */}
             <div className="tw-flex-1 tw-flex tw-flex-col tw-justify-center tw-mr-8 sm:tw-mr-6">
-              <span className="lg:tw-text-base md:tw-text-sm sm:tw-text-xs tw-font-medium tw-text-[#3a3a7c]">
+              <span className="lg:tw-text-base md:tw-text-sm sm:tw-text-xs tw-font-medium tw-text-gray-600">
                 {` ${notifications[currentIndex].name} bought ${notifications[currentIndex].description} Adao`}
               </span>
-              <span className="tw-text-xs tw-text-[#7b7bb0] tw-mt-1">
+              <span className="tw-text-xs tw-text-gray-500 tw-mt-1">
                 {notifications[currentIndex].pubDate}
               </span>
             </div>
