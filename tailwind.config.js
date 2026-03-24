@@ -9,16 +9,25 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: [
+          "var(--font-inter)",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "sans-serif",
+        ],
+      },
       colors: {
         mint: {
           500: "#3EB489", // Add your desired mint color here
         },
         primary: {
-          DEFAULT: "#673DE6",
-          hover: "#7c5cf0",
+          DEFAULT: "#2563eb",
+          hover: "#1d4ed8",
         },
-        surface: "#24252d",
-        page: "#24252d",
+        surface: "#ffffff",
+        page: "#f4f7fc",
       },
     },
   },

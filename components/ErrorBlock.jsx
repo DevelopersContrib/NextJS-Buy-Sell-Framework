@@ -1,6 +1,6 @@
 export default function ErrorBlock({ msg }) {
   return (
-    <div className="tw-block tw-text-red-400 tw-text-sm tw-mt-2">
+    <div className="tw-mt-2 tw-block tw-text-sm tw-text-red-600">
       {msg}
     </div>
   );

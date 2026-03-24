@@ -16,12 +16,12 @@ const BlogSlugPage = ({ id }) => {
       : "";
 
   return loading ? (
-    <section className="tw-min-h-screen tw-py-16">
+    <section className="hero-mesh tw-min-h-screen tw-py-16">
       <LoadingState />
     </section>
   ) : (
-    <section className="tw-min-h-screen tw-py-16">
-      <div className="container animate_top mb-10 rounded-md border border-stroke bg-white p-3.5 shadow-solid-13 dark:border-strokedark dark:bg-blacksection">
+    <section className="hero-mesh tw-min-h-screen tw-py-16">
+      <div className="container tw-mb-10 tw-rounded-xl tw-border tw-border-zinc-200 tw-bg-white tw-p-4 tw-shadow-sm">
         <div
           dangerouslySetInnerHTML={{ __html: content }}
           className="custom-blog-content"

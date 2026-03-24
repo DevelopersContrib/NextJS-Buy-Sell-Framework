@@ -381,7 +381,7 @@ export const First100FoundersModal = ({
               href="https://www.ventureos.com/first100founders"
               target="_blank"
               rel="noopener noreferrer"
-              className="tw-group tw-px-12 tw-py-6 tw-bg-[#36373E] hover:tw-bg-[#44454e] tw-text-white tw-font-bold tw-text-xl md:tw-text-2xl tw-rounded-2xl tw-transition-all tw-duration-300 tw-shadow-2xl hover:tw-shadow-[#36373E]/35 tw-transform hover:tw-scale-105 tw-flex tw-items-center tw-space-x-3 tw-w-full sm:tw-w-auto tw-justify-center"
+              className="tw-group tw-px-12 tw-py-6 tw-bg-zinc-900 hover:tw-bg-zinc-800 tw-text-white tw-font-bold tw-text-xl md:tw-text-2xl tw-rounded-2xl tw-transition-all tw-duration-300 tw-shadow-2xl tw-shadow-zinc-950/40 hover:tw-shadow-blue-900/25 tw-transform hover:tw-scale-105 tw-flex tw-items-center tw-space-x-3 tw-w-full sm:tw-w-auto tw-justify-center"
             >
               <span>{content?.ctaText || 'Access Beta Now'}</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="tw-w-6 tw-h-6 tw-group-hover:tw-translate-x-2 tw-transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>

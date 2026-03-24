@@ -37,21 +37,16 @@ const Container = ({ domain, logo, countries, background }) => {
   const [success, setSuccess] = useState(false);
 
   return (
-    <section
-      style={{ backgroundImage: background ? `url('${background}')` : undefined }}
-      className="tw-min-h-[calc(100vh-56px-74px)] tw-relative tw-py-12 tw-px-4 tw-flex tw-w-full tw-items-center tw-bg-[#24252d] tw-bg-cover tw-bg-center tw-bg-no-repeat tw-text-white tw-overflow-hidden"
-    >
-      {/* Dark overlay */}
-      <div className="tw-absolute tw-inset-0 tw-bg-[#24252d]/90" aria-hidden />
-      {/* Overlay image + gradient (same as hero) */}
+    <section className="hero-mesh tw-relative tw-flex tw-min-h-[calc(100vh-56px-74px)] tw-w-full tw-flex-col tw-items-stretch tw-overflow-hidden tw-px-4 tw-py-12 tw-pb-20 tw-text-zinc-900 md:tw-pb-28">
       <div
-        className="tw-absolute tw-inset-0 tw-pointer-events-none"
-        style={{
-          backgroundImage: 'url("/images/overlay.png"), linear-gradient(45deg, #6E436C 25%, #2A4584 75%)',
-        }}
+        className="tw-pointer-events-none tw-absolute tw-inset-0 tw-bg-cover tw-bg-center tw-bg-no-repeat tw-opacity-[0.06]"
+        style={
+          background ? { backgroundImage: `url('${background}')` } : undefined
+        }
         aria-hidden
       />
-      <div className="container tw-max-w-6xl tw-relative tw-z-10">
+      <div className="tw-pointer-events-none tw-absolute tw-inset-0 hero-grid-light" aria-hidden />
+      <div className="container tw-relative tw-z-10 tw-max-w-6xl">
         <div className="tw-text-center tw-mb-12">
           <Logo domain={domain} logo={logo} />
         </div>
@@ -62,21 +57,21 @@ const Container = ({ domain, logo, countries, background }) => {
           <Form domain={domain} countries={countries} setSuccess={setSuccess} />
         )}
 
-        <div className="tw-border-t tw-border-[#673DE6]/25 tw-my-12" />
+        <div className="tw-my-12 tw-border-t tw-border-zinc-200/90" />
 
-        <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-8 tw-mt-10">
+        <div className="tw-mt-10 tw-grid tw-grid-cols-1 tw-gap-6 md:tw-grid-cols-2 md:tw-gap-8">
           {steps.map((step, index) => (
             <div
               key={index}
-              className={`tw-flex tw-items-center tw-gap-6 tw-p-6 tw-rounded-2xl tw-bg-[#24252d] tw-border tw-border-[#673DE6]/25 tw-backdrop-blur-sm tw-transition-all tw-duration-300 hover:tw-border-[#673DE6]/40 ${
+              className={`tw-flex tw-items-center tw-gap-6 tw-rounded-2xl tw-border tw-border-zinc-200/90 tw-bg-white/80 tw-p-6 tw-shadow-sm tw-backdrop-blur-sm tw-transition-all tw-duration-300 hover:tw-border-blue-200/80 hover:tw-shadow-md ${
                 step.align === "right" ? "md:tw-flex-row-reverse" : ""
               }`}
             >
               <div className="tw-flex-1">
-                <h4 className="tw-text-xl tw-font-semibold tw-text-white tw-mb-2">
+                <h4 className="tw-mb-2 tw-text-xl tw-font-semibold tw-text-zinc-900">
                   {step.title}
                 </h4>
-                <p className="tw-text-sm tw-text-gray-400 tw-mb-0">
+                <p className="tw-mb-0 tw-text-sm tw-text-zinc-600">
                   {step.description}
                 </p>
               </div>

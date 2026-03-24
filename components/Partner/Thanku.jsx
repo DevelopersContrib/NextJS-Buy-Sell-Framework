@@ -1,20 +1,21 @@
 import Image from "next/image";
+import { btnPrimaryDarkSurfaceFull } from "@/lib/themeButtons";
 
 export default function Thanku({ domain, emailCode }) {
   return (
     <>
-      <div className="tw-max-w-2xl tw-mx-auto tw-text-center">
+      <div className="tw-mx-auto tw-max-w-2xl tw-text-center">
         <Image
           src="https://cdn.vnoc.com/background/contrib/handshake.png"
           width={140}
           height={140}
           alt=""
-          className="tw-inline-flex tw-mb-6"
+          className="tw-mb-6 tw-inline-flex"
         />
-        <h2 className="tw-mb-6 tw-text-white tw-text-2xl sm:tw-text-3xl tw-font-semibold">
+        <h2 className="tw-mb-6 tw-text-2xl tw-font-semibold tw-text-zinc-900 sm:tw-text-3xl">
           Thank you for your Partnership Application!
         </h2>
-        <div className="tw-text-gray-400 tw-space-y-4 tw-mb-8">
+        <div className="tw-mb-8 tw-space-y-4 tw-text-zinc-600">
           <p>
             You are now minutes away from joining the {domain} team. All you need to do right now is
             click the link in the verification email that we have just sent you. If you still
@@ -28,10 +29,14 @@ export default function Thanku({ domain, emailCode }) {
           </p>
         </div>
         <a
-          href={"https://www.contrib.com/account/autologinforms?email=" + emailCode + "&form=partnership"}
+          href={
+            "https://www.contrib.com/account/autologinforms?email=" +
+            emailCode +
+            "&form=partnership"
+          }
           target="_blank"
           rel="noopener noreferrer"
-          className="tw-inline-block tw-w-full sm:tw-w-auto tw-py-4 tw-px-8 tw-rounded-xl tw-bg-[#36373E] hover:tw-bg-[#44454e] tw-text-white tw-font-semibold tw-no-underline tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-[#36373E]/50"
+          className={`${btnPrimaryDarkSurfaceFull} tw-inline-block tw-w-full sm:tw-w-auto`}
         >
           Go to your Contrib account
         </a>

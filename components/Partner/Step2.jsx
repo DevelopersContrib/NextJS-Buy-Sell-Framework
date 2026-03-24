@@ -1,9 +1,11 @@
 import ErrorBlock from "../ErrorBlock";
+import {
+  btnPrimaryDarkSurfaceGrid,
+  btnSecondaryDarkSurfaceGrid,
+} from "@/lib/themeButtons";
+import { inputClass, labelClass } from "@/lib/formTheme";
 
-const inputClass =
-  "tw-w-full tw-px-4 tw-py-3 tw-rounded-xl tw-bg-[#2d2e36] tw-border tw-border-white/20 tw-text-white tw-placeholder-gray-400 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-[#673DE6]/50 focus:tw-border-[#673DE6]/60";
-const labelClass = "tw-block tw-text-sm tw-font-medium tw-text-gray-300 tw-mb-2";
-const requiredSpan = <span className="tw-text-red-400">*</span>;
+const requiredSpan = <span className="tw-text-red-600">*</span>;
 
 export default function Step2({
   data,
@@ -18,17 +20,17 @@ export default function Step2({
     <>
       <div className="row">
         <div className="col-xl-12 tw-text-center tw-mb-6">
-          <h2 className="tw-text-2xl sm:tw-text-3xl tw-font-semibold tw-text-white">
-            Complete your Partnership
+          <h2 className="tw-text-2xl tw-font-semibold tw-tracking-tight tw-text-zinc-900 sm:tw-text-3xl">
+            Complete your partnership
           </h2>
-          <p className="tw-text-gray-400 tw-mt-1">
+          <p className="tw-mt-1 tw-text-zinc-600">
             Please complete your profile in order to present your partnership to the domain owner.
           </p>
         </div>
         <div className="col-xl-12">
           <div className="tw-mb-4">
             <label className={labelClass}>
-              Website <small className="tw-text-gray-500">( https:// )</small> {requiredSpan}
+              Website <small className="tw-text-zinc-500">( https:// )</small> {requiredSpan}
             </label>
             <input
               name="website"
@@ -80,14 +82,14 @@ export default function Step2({
           <div className="tw-grid tw-grid-cols-2 tw-gap-4">
             <button
               type="button"
-              className="tw-py-4 tw-px-6 tw-rounded-xl tw-border tw-border-[#673DE6]/50 tw-text-[#a78bfa] hover:tw-bg-[#673DE6]/20 tw-font-semibold tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-[#673DE6]/50"
+              className={btnSecondaryDarkSurfaceGrid}
               onClick={prevStep}
             >
               Back
             </button>
             <button
               type="button"
-              className="tw-py-4 tw-px-6 tw-rounded-xl tw-bg-[#36373E] hover:tw-bg-[#44454e] tw-text-white tw-font-semibold tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-[#36373E]/50"
+              className={btnPrimaryDarkSurfaceGrid}
               onClick={handleSubmit}
             >
               Next

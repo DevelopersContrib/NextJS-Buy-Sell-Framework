@@ -1,9 +1,17 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './globals.css';
-import { getData, getDomain } from '../lib/data';
-import Script from 'next/script';
-import { Metadata } from 'next';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./globals.css";
+import { getData, getDomain } from "../lib/data";
+import Script from "next/script";
+import { Metadata } from "next";
+import { Inter } from "next/font/google";
 import First100FoundersModalWrapper from "@/components/First100FoundersModalWrapper";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 
 
@@ -53,7 +61,7 @@ export default async function RootLayout({ children }) {
   
   const c = await getData();
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <head>
          
         { c.data.adsenseClientId!==''?(<Script id="g-ads" async='' src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${c.data.adsenseClientId}`} crossorigin="anonymous"  data-checked-head="true"></Script>):'' }

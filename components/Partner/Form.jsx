@@ -217,7 +217,7 @@ export default function PartnerForm({ domain, countries, setSuccess, setEmailCod
   };
 
   return (
-    <div className="tw-flex-[1_1_50%] tw-p-6 sm:tw-p-8 lg:tw-p-10">
+    <div className="tw-min-w-0 tw-flex-[1_1_50%] tw-p-6 sm:tw-p-8 lg:tw-p-10">
       {data.isLoading ? <LoadingState /> : showStep()}
     </div>
   );

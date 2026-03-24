@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import LoadingState from "../LoadingState";
 import ErrorBlock from "../ErrorBlock";
+import { btnPrimaryDarkSurfaceFull } from "@/lib/themeButtons";
+import { inputClass, labelClass } from "@/lib/formTheme";
 
 function BuyForm({ domain, countries, setSuccess }) {
   const initialValues = {
@@ -141,108 +143,110 @@ function BuyForm({ domain, countries, setSuccess }) {
   const showStep = () => {
     return (
       <div className="col-xl-12">
-        <div className="tw-flex tw-flex-col lg:tw-flex-row tw-w-full tw-gap-0 tw-rounded-2xl tw-overflow-hidden tw-border tw-border-[#673DE6]/25 tw-bg-[#24252d] tw-backdrop-blur-sm">
-          <div className="tw-flex-[1_1_50%] tw-p-6 sm:tw-p-8 lg:tw-p-10">
+        <div className="tw-flex tw-w-full tw-flex-col tw-gap-0 tw-overflow-hidden tw-rounded-2xl tw-border tw-border-zinc-200/90 tw-bg-white/95 tw-shadow-sm tw-backdrop-blur-md lg:tw-flex-row">
+          <div className="tw-min-w-0 tw-flex-[1_1_50%] tw-p-6 sm:tw-p-8 lg:tw-p-10">
             <div className="row">
-              <div className="col-xl-12 tw-text-center tw-mb-6">
-                <h2 className="tw-text-2xl sm:tw-text-3xl tw-font-semibold tw-text-white">
+              <div className="col-xl-12 tw-mb-6 tw-text-center">
+                <h2 className="tw-text-2xl tw-font-semibold tw-tracking-tight tw-text-zinc-900 sm:tw-text-3xl">
                   Make an offer for {domain}
                 </h2>
-                <p className="tw-text-gray-400 tw-mt-1">Invest in a premium domain name to be your brand.</p>
+                <p className="tw-mt-1 tw-text-zinc-600">
+                  Invest in a premium domain name to be your brand.
+                </p>
               </div>
               <div className="col-xl-12">
                 <div className="tw-mb-4">
-                  <label className="tw-block tw-text-sm tw-font-medium tw-text-gray-300 tw-mb-2">
-                    Amount <span className="tw-text-red-400">*</span>
+                  <label className={labelClass}>
+                    Amount <span className="tw-text-red-600">*</span>
                   </label>
                   <input
                     type="text"
                     name="amount"
                     value={data.amount}
                     onChange={handleChange}
-                    className="tw-w-full tw-px-4 tw-py-3 tw-rounded-xl tw-bg-[#2d2e36] tw-border tw-border-white/20 tw-text-white focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-[#673DE6]/50 focus:tw-border-[#673DE6]/60"
+                    className={inputClass}
                   />
                   {errors.validate ? <ErrorBlock msg={errors.amountError} /> : null}
                 </div>
                 <div className="row">
                   <div className="col-xl-6 tw-mb-4">
-                    <label className="tw-block tw-text-sm tw-font-medium tw-text-gray-300 tw-mb-2">
-                      First Name <span className="tw-text-red-400">*</span>
+                    <label className={labelClass}>
+                      First Name <span className="tw-text-red-600">*</span>
                     </label>
                     <input
                       name="firstName"
                       value={data.firstName}
                       onChange={handleChange}
                       type="text"
-                      className="tw-w-full tw-px-4 tw-py-3 tw-rounded-xl tw-bg-[#2d2e36] tw-border tw-border-white/20 tw-text-white tw-placeholder-gray-400 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-[#673DE6]/50 focus:tw-border-[#673DE6]/60"
+                      className={inputClass}
                     />
                     {errors.validate ? <ErrorBlock msg={errors.firstNameError} /> : null}
                   </div>
                   <div className="col-xl-6 tw-mb-4">
-                    <label className="tw-block tw-text-sm tw-font-medium tw-text-gray-300 tw-mb-2">
-                      Last Name <span className="tw-text-red-400">*</span>
+                    <label className={labelClass}>
+                      Last Name <span className="tw-text-red-600">*</span>
                     </label>
                     <input
                       name="lastName"
                       value={data.lastName}
                       onChange={handleChange}
                       type="text"
-                      className="tw-w-full tw-px-4 tw-py-3 tw-rounded-xl tw-bg-[#2d2e36] tw-border tw-border-white/20 tw-text-white tw-placeholder-gray-400 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-[#673DE6]/50 focus:tw-border-[#673DE6]/60"
+                      className={inputClass}
                     />
                     {errors.validate ? <ErrorBlock msg={errors.lastNameError} /> : null}
                   </div>
                 </div>
                 <div className="tw-mb-4">
-                  <label className="tw-block tw-text-sm tw-font-medium tw-text-gray-300 tw-mb-2">
-                    Email Address <span className="tw-text-red-400">*</span>
+                  <label className={labelClass}>
+                    Email Address <span className="tw-text-red-600">*</span>
                   </label>
                   <input
                     type="text"
                     name="email"
                     value={data.email}
                     onChange={handleChange}
-                    className="tw-w-full tw-px-4 tw-py-3 tw-rounded-xl tw-bg-[#2d2e36] tw-border tw-border-white/20 tw-text-white tw-placeholder-gray-400 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-[#673DE6]/50 focus:tw-border-[#673DE6]/60"
+                    className={inputClass}
                   />
                   {errors.validate ? <ErrorBlock msg={errors.emailError} /> : null}
                 </div>
                 <div className="row">
                   <div className="col-xl-6 tw-mb-4">
-                    <label className="tw-block tw-text-sm tw-font-medium tw-text-gray-300 tw-mb-2">
-                      Password <span className="tw-text-red-400">*</span>
+                    <label className={labelClass}>
+                      Password <span className="tw-text-red-600">*</span>
                     </label>
                     <input
                       type="password"
                       name="password"
                       value={data.password}
                       onChange={handleChange}
-                      className="tw-w-full tw-px-4 tw-py-3 tw-rounded-xl tw-bg-[#2d2e36] tw-border tw-border-white/20 tw-text-white tw-placeholder-gray-400 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-[#673DE6]/50 focus:tw-border-[#673DE6]/60"
+                      className={inputClass}
                     />
                     {errors.validate ? <ErrorBlock msg={errors.passwordError} /> : null}
                   </div>
                   <div className="col-xl-6 tw-mb-4">
-                    <label className="tw-block tw-text-sm tw-font-medium tw-text-gray-300 tw-mb-2">
-                      Confirm Password <span className="tw-text-red-400">*</span>
+                    <label className={labelClass}>
+                      Confirm Password <span className="tw-text-red-600">*</span>
                     </label>
                     <input
                       type="password"
                       name="confirmPassword"
                       value={data.confirmPassword}
                       onChange={handleChange}
-                      className="tw-w-full tw-px-4 tw-py-3 tw-rounded-xl tw-bg-[#2d2e36] tw-border tw-border-white/20 tw-text-white tw-placeholder-gray-400 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-[#673DE6]/50 focus:tw-border-[#673DE6]/60"
+                      className={inputClass}
                     />
                     {errors.validate ? <ErrorBlock msg={errors.confirmPasswordError} /> : null}
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-xl-6 tw-mb-4">
-                    <label className="tw-block tw-text-sm tw-font-medium tw-text-gray-300 tw-mb-2">
-                      Choose Country <span className="tw-text-red-400">*</span>
+                    <label className={labelClass}>
+                      Choose Country <span className="tw-text-red-600">*</span>
                     </label>
                     <select
                       name="country_id"
                       value={data.country_id + "::" + data.phoneCode}
                       onChange={countryChange}
-                      className="tw-w-full tw-px-4 tw-py-3 tw-rounded-xl tw-bg-[#2d2e36] tw-border tw-border-white/20 tw-text-white focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-[#673DE6]/50 focus:tw-border-[#673DE6]/60"
+                      className={inputClass}
                     >
                       {countries.map((country) => (
                         <option key={country.country_id} value={country.country_id + "::" + country.phone_code}>
@@ -253,28 +257,28 @@ function BuyForm({ domain, countries, setSuccess }) {
                     {errors.validate ? <ErrorBlock msg={errors.countryError} /> : null}
                   </div>
                   <div className="col-xl-6 tw-mb-4">
-                    <label className="tw-block tw-text-sm tw-font-medium tw-text-gray-300 tw-mb-2">
-                      Phone <span className="tw-text-red-400">*</span>
+                    <label className={labelClass}>
+                      Phone <span className="tw-text-red-600">*</span>
                     </label>
                     <input
                       name="phone"
                       value={data.phone}
                       onChange={handleChange}
                       type="text"
-                      className="tw-w-full tw-px-4 tw-py-3 tw-rounded-xl tw-bg-[#2d2e36] tw-border tw-border-white/20 tw-text-white tw-placeholder-gray-400 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-[#673DE6]/50 focus:tw-border-[#673DE6]/60"
+                      className={inputClass}
                     />
                     {errors.validate ? <ErrorBlock msg={errors.phoneError} /> : null}
                   </div>
                 </div>
                 <div className="tw-mb-4">
-                  <label className="tw-block tw-text-sm tw-font-medium tw-text-gray-300 tw-mb-2">
-                    How do you wish to be contacted? <span className="tw-text-red-400">*</span>
+                  <label className={labelClass}>
+                    How do you wish to be contacted? <span className="tw-text-red-600">*</span>
                   </label>
                   <select
                     name="contact_by"
                     value={data.contactBy}
                     onChange={contactByChange}
-                    className="tw-w-full tw-px-4 tw-py-3 tw-rounded-xl tw-bg-[#2d2e36] tw-border tw-border-white/20 tw-text-white focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-[#673DE6]/50 focus:tw-border-[#673DE6]/60"
+                    className={inputClass}
                   >
                     <option value=""></option>
                     <option value="SMS">SMS</option>
@@ -283,57 +287,57 @@ function BuyForm({ domain, countries, setSuccess }) {
                   {errors.validate ? <ErrorBlock msg={errors.contactByError} /> : null}
                 </div>
                 <div className="tw-mb-4">
-                  <label className="tw-block tw-text-sm tw-font-medium tw-text-gray-300 tw-mb-2">
-                    Message <span className="tw-text-red-400">*</span>
+                  <label className={labelClass}>
+                    Message <span className="tw-text-red-600">*</span>
                   </label>
                   <textarea
                     name="message"
                     value={data.message}
                     onChange={handleChange}
                     rows={3}
-                    className="tw-w-full tw-px-4 tw-py-3 tw-rounded-xl tw-bg-[#2d2e36] tw-border tw-border-white/20 tw-text-white tw-placeholder-gray-400 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-[#673DE6]/50 focus:tw-border-[#673DE6]/60 tw-resize-none"
+                    className={`${inputClass} tw-resize-none`}
                   />
                   {errors.validate ? <ErrorBlock msg={errors.messageError} /> : null}
                 </div>
                 <div className="tw-mb-4">
                   <button
                     type="button"
-                    className="tw-w-full tw-py-4 tw-px-6 tw-rounded-xl tw-bg-[#36373E] hover:tw-bg-[#44454e] tw-text-white tw-font-semibold tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-[#36373E]/50"
+                    className={btnPrimaryDarkSurfaceFull}
                     onClick={handleSubmit}
                   >
                     Submit Offer
                   </button>
                 </div>
-                <p className="tw-text-center tw-text-sm tw-text-gray-400">
-                  <Link href="/partner" className="tw-no-underline tw-text-[#673DE6] hover:tw-text-[#a78bfa]">
+                <p className="tw-text-center tw-text-sm tw-text-zinc-600">
+                  <Link href="/partner" className="tw-text-blue-600 tw-no-underline tw-transition-colors hover:tw-text-blue-700">
                     Or partner with this domain instead
                   </Link>
                 </p>
               </div>
             </div>
           </div>
-          <div className="tw-flex-[1_1_50%] tw-bg-[#24252d] tw-p-6 sm:tw-p-8 lg:tw-p-10 tw-flex tw-justify-center tw-items-center tw-flex-col tw-border-l-0 lg:tw-border-l tw-border-t lg:tw-border-t-0 tw-border-[#673DE6]/25">
-            <h2 className="tw-text-2xl sm:tw-text-3xl tw-font-semibold tw-text-white tw-mb-4 tw-text-center">
+          <div className="tw-flex tw-min-w-0 tw-flex-[1_1_50%] tw-flex-col tw-items-center tw-justify-center tw-border-t tw-border-zinc-200/90 tw-bg-zinc-50/90 tw-p-6 sm:tw-p-8 lg:tw-border-l lg:tw-border-t-0 lg:tw-border-zinc-200/90 lg:tw-p-10">
+            <h2 className="tw-mb-4 tw-text-center tw-text-2xl tw-font-semibold tw-tracking-tight tw-text-zinc-900 sm:tw-text-3xl">
               A great domain name is a great asset
             </h2>
-            <p className="tw-text-gray-400 tw-text-center tw-mb-8">
+            <p className="tw-mb-8 tw-text-center tw-text-zinc-600">
               Invest in a great domain name as part of your brand strategy and take your business to the next level
             </p>
-            <ul className="tw-list-none tw-p-0 tw-m-0 tw-space-y-4">
-              <li className="tw-flex tw-items-center tw-gap-3 tw-text-gray-300">
-                <FontAwesomeIcon icon={faCheck} className="tw-w-7 tw-h-7 tw-text-[#673DE6] tw-shrink-0" />
+            <ul className="tw-m-0 tw-list-none tw-space-y-4 tw-p-0">
+              <li className="tw-flex tw-items-center tw-gap-3 tw-text-zinc-700">
+                <FontAwesomeIcon icon={faCheck} className="tw-h-7 tw-w-7 tw-shrink-0 tw-text-blue-600" />
                 Secure your online identity
               </li>
-              <li className="tw-flex tw-items-center tw-gap-3 tw-text-gray-300">
-                <FontAwesomeIcon icon={faCheck} className="tw-w-7 tw-h-7 tw-text-[#673DE6] tw-shrink-0" />
+              <li className="tw-flex tw-items-center tw-gap-3 tw-text-zinc-700">
+                <FontAwesomeIcon icon={faCheck} className="tw-h-7 tw-w-7 tw-shrink-0 tw-text-blue-600" />
                 Enhance your brand equity
               </li>
-              <li className="tw-flex tw-items-center tw-gap-3 tw-text-gray-300">
-                <FontAwesomeIcon icon={faCheck} className="tw-w-7 tw-h-7 tw-text-[#673DE6] tw-shrink-0" />
+              <li className="tw-flex tw-items-center tw-gap-3 tw-text-zinc-700">
+                <FontAwesomeIcon icon={faCheck} className="tw-h-7 tw-w-7 tw-shrink-0 tw-text-blue-600" />
                 Boost your credibility
               </li>
-              <li className="tw-flex tw-items-center tw-gap-3 tw-text-gray-300">
-                <FontAwesomeIcon icon={faCheck} className="tw-w-7 tw-h-7 tw-text-[#673DE6] tw-shrink-0" />
+              <li className="tw-flex tw-items-center tw-gap-3 tw-text-zinc-700">
+                <FontAwesomeIcon icon={faCheck} className="tw-h-7 tw-w-7 tw-shrink-0 tw-text-blue-600" />
                 Improve conversion rates
               </li>
             </ul>
