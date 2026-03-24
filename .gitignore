@@ -28,7 +28,7 @@ yarn-error.log*
 .env
 .env*.local
 
-# vercel
+# vercel / cloudflare (next-on-pages uses Vercel build output)
 .vercel
 
 # typescript
